@@ -195,3 +195,55 @@ table tr:nth-child(odd) {
 table tr:hover {
     background-color: #ddd;
 }
+
+/* Diseño de las tablas */
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#respuestaSenati {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #101422, #202741, #343c63);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    color: #f5f5f5;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #4c5288;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #202741;
+    transform: scale(1.05);
+}
