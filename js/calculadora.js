@@ -152,3 +152,32 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 });
+
+// Validacion para mi formulario
+document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("formSenati").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        let nombre = document.getElementById("nombre").value.trim();
+        let dni = document.getElementById("dni").value.trim();
+        let correo = document.getElementById("correo").value.trim();
+        let telefono = document.getElementById("telefono").value.trim();
+        let curso = document.getElementById("curso").value;
+        let salida = document.getElementById("respuestaSenati");
+
+        if(nombre === "" || dni === "" || correo === "" || telefono === "" || curso === ""){
+            alert("Por favor completa todos los campos");
+            salida.textContent = "Error: faltan datos";
+            return;
+        }
+
+        // Validación básica de correo
+        if(!correo.includes("@") || !correo.includes(".")){
+            alert("Ingresa un correo válido");
+            salida.textContent = "Error: correo inválido";
+            return;
+        }
+
+        salida.textContent = "¡Gracias, " + nombre + "! Tu inscripción al curso de " + curso + " fue registrada correctamente.";
+    });
+});
